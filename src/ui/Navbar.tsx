@@ -19,14 +19,14 @@ const Navbar = () => {
           aria-label='Global'>
           <div className='flex items-center flex-1'>
             <div className='flex items-center justify-between w-full md:w-auto'>
-              <a href='#'>
+              <Link href='#'>
                 <span className='sr-only'>Your Company</span>
                 <img
                   className='w-auto h-8 sm:h-10'
                   src='https://tailwindui.com/img/logos/mark.svg?from-color=teal&from-shade=200&to-color=green&to-shade=400&toShade=400'
                   alt=''
                 />
-              </a>
+              </Link>
               <div className='flex items-center -mr-2 md:hidden'>
                 <Popover.Button className='inline-flex items-center justify-center p-2 text-gray-400 bg-gray-900 rounded-md focus-ring-inset hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white'>
                   <span className='sr-only'>Open main menu</span>
@@ -46,16 +46,16 @@ const Navbar = () => {
             </div>
           </div>
           <div className='hidden md:flex md:items-center md:space-x-6'>
-            <a
+            <Link
               href='#'
               className='text-base font-medium text-white hover:text-gray-300'>
               Log in
-            </a>
-            <a
+            </Link>
+            <Link
               href='#'
               className='inline-flex items-center px-4 py-2 text-base font-medium text-white bg-gray-600 border border-transparent rounded-md hover:bg-gray-700'>
-              Start free trial
-            </a>
+              Sign up
+            </Link>
           </div>
         </nav>
       </div>
@@ -90,27 +90,27 @@ const Navbar = () => {
             <div className='pt-5 pb-6'>
               <div className='px-2 space-y-1'>
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
                     href={item.href}
                     className='block px-3 py-2 text-base font-medium text-gray-900 rounded-md hover:bg-gray-100'>
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
               <div className='px-5 mt-6'>
-                <a
+                <Link
                   href='#'
                   className='block w-full px-4 py-3 font-medium text-center text-white bg-green-500 rounded-md shadow hover:bg-green-600'>
                   Sign up
-                </a>
+                </Link>
               </div>
               <div className='px-5 mt-6'>
                 <p className='text-base font-medium text-center text-gray-500'>
                   Existing customer?{' '}
-                  <a href='#' className='text-gray-900 hover:underline'>
+                  <Link href='#' className='text-gray-900 hover:underline'>
                     Login
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>
