@@ -1,109 +1,88 @@
-import Button from '../components/Button';
+import Link from 'next/link';
+import { ChevronRightIcon } from '@heroicons/react/20/solid';
 
-export default function Hero() {
+const Hero = () => {
   return (
-    <div className='relative overflow-hidden bg-gray-900 isolate'>
-      {/* Below - Hero Gradient */}
-      <svg
-        viewBox='0 0 1108 632'
-        aria-hidden='true'
-        className='absolute top-10 left-[calc(50%-4rem)] -z-10 w-[69.25rem] max-w-none transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]'>
-        <path
-          fill='url(#175c433f-44f6-4d59-93f0-c5c51ad5566d)'
-          fillOpacity='.2'
-          d='M235.233 402.609 57.541 321.573.83 631.05l234.404-228.441 320.018 145.945c-65.036-115.261-134.286-322.756 109.01-230.655C968.382 433.026 1031 651.247 1092.23 459.36c48.98-153.51-34.51-321.107-82.37-385.717L810.952 324.222 648.261.088 235.233 402.609Z'
-        />
-        <defs>
-          <linearGradient
-            id='175c433f-44f6-4d59-93f0-c5c51ad5566d'
-            x1='1220.59'
-            x2='-85.053'
-            y1='432.766'
-            y2='638.714'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#4F46E5' />
-            <stop offset={1} stopColor='#80CAFF' />
-          </linearGradient>
-        </defs>
-      </svg>
-      <div className='px-6 pt-10 pb-24 mx-auto max-w-7xl sm:pb-32 lg:flex lg:py-40 lg:px-8'>
-        <div className='flex-shrink-0 max-w-2xl mx-auto lg:mx-0 lg:max-w-xl lg:pt-8'>
-          {/* <img
-            className='h-11'
-            src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500'
-            alt='Your Company'
-          /> */}
-          <div className='mt-24 sm:mt-32 lg:mt-16'>
-            <a href='#' className='inline-flex space-x-6'>
-              {/* 
-                TODO: This should lead to new courses
-              */}
-              <span className='px-3 py-1 text-sm font-semibold leading-6 text-blue-400 rounded-full bg-indigo-500/10 ring-1 ring-inset ring-blue-500/20'>
-                What's new
-              </span>
-              <span className='inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-300'>
-                {/* 
-                TODO: This should lead to the most popular courses
-              */}
-                <span>Most popular</span>
-                {/* Right Chevron Icon */}
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  strokeWidth={1.5}
-                  stroke='currentColor'
-                  className='w-5 h-5 text-gray-500'>
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M8.25 4.5l7.5 7.5-7.5 7.5'
+    <section>
+      <div className='pt-10 bg-gray-900 sm:pt-16 lg:overflow-hidden lg:pt-8 lg:pb-14'>
+        <div className='mx-auto max-w-7xl lg:px-8'>
+          <div className='lg:grid lg:grid-cols-2 lg:gap-8'>
+            <div className='max-w-md px-6 mx-auto sm:max-w-2xl sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left'>
+              <div className='lg:py-24'>
+                <Link
+                  href='#'
+                  className='inline-flex items-center p-1 pr-2 text-gray-100 bg-black rounded-full hover:text-gray-200 sm:text-base lg:text-sm xl:text-base'>
+                  <span className='rounded-full bg-green-500 px-3 py-0.5 text-sm font-semibold leading-5 text-white'>
+                    We're hiring
+                  </span>
+                  <span className='ml-4 text-sm'>Visit our careers page</span>
+                  <ChevronRightIcon
+                    className='w-5 h-5 ml-2 text-gray-500'
+                    aria-hidden='true'
                   />
-                </svg>
-              </span>
-            </a>
-          </div>
-          <h1 className='mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl'>
-            Take your career to new heights.
-          </h1>
-          <p className='mt-6 text-lg leading-8 text-gray-300'>
-            Unlock your potential and advance your career with our online
-            courses. Gain in-demand skills that will benefit you and your
-            future!
-          </p>
-          <div className='flex items-center mt-10 gap-x-3'>
-            {/* 
-                TODO: This should lead to the sign up page
-              */}
-            <Button color='blue'>Get started</Button>
-            <Button
-              isLink={true}
-              href='#'
-              variant='ghost'
-              // className='text-base font-semibold leading-7 text-white'
-            >
-              {/* 
-                TODO: This should lead to maybe.. a testimonials page?
-              */}
-              Learn more <span aria-hidden='true'>→</span>
-            </Button>
-          </div>
-        </div>
-        <div className='flex max-w-2xl mx-auto mt-16 sm:mt-24 lg:ml-10 lg:mt-0 lg:mr-0 lg:max-w-none lg:flex-none xl:ml-32'>
-          <div className='flex-none max-w-3xl sm:max-w-5xl lg:max-w-none'>
-            {/* 
-                TODO: This should be an image or maybe a code snippet, or a person (classic cheese)
-              */}
-            <img
-              src='https://tailwindui.com/img/component-images/dark-project-app-screenshot.png'
-              alt='App screenshot'
-              width={2432}
-              height={1442}
-              className='w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10'
-            />
+                </Link>
+                <h1 className='mt-4 text-4xl font-bold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl'>
+                  <span className='block'>A better way to</span>
+                  <span className='block pb-3 text-transparent bg-gradient-to-r from-teal-200 to-green-400 bg-clip-text sm:pb-5'>
+                    ship web apps
+                  </span>
+                </h1>
+                <p className='text-base text-gray-300 sm:text-xl lg:text-xl'>
+                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
+                  qui Lorem cupidatat commodo. Elit sunt amet fugiat veniam
+                  occaecat fugiat.
+                </p>
+                <div className='mt-10 sm:mt-12'>
+                  <form action='#' className='sm:mx-auto sm:max-w-xl lg:mx-0'>
+                    <div className='sm:flex'>
+                      <div className='flex-1 min-w-0'>
+                        <label htmlFor='email' className='sr-only'>
+                          Email address
+                        </label>
+                        <input
+                          id='email'
+                          type='email'
+                          placeholder='Enter your email'
+                          className='block w-full px-4 py-3 text-base text-gray-100 placeholder-gray-500 border-0 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-gray-900'
+                        />
+                      </div>
+                      <div className='mt-3 sm:mt-0 sm:ml-3'>
+                        <button
+                          type='submit'
+                          className='block w-full px-4 py-3 font-medium text-gray-100 bg-green-500 rounded-md shadow hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-gray-900'>
+                          Start free trial
+                        </button>
+                      </div>
+                    </div>
+                    <p className='mt-3 text-sm text-gray-300 sm:mt-4'>
+                      Start your free 14-day trial, no credit card necessary. By
+                      providing your email, you agree to our{' '}
+                      <Link
+                        href='#'
+                        className='font-medium text-white hover:underline'>
+                        terms of service
+                      </Link>
+                      .
+                    </p>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div className='mt-12 -mb-16 sm:-mb-48 lg:relative lg:m-0'>
+              <div className='max-w-md px-6 mx-auto sm:max-w-2xl lg:max-w-none lg:px-0'>
+                {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
+                <img
+                  className='w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none'
+                  src='https://tailwindui.com/img/component-images/cloud-illustration-teal-cyan.svg'
+                  alt=''
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default Hero;
