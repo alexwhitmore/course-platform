@@ -2,7 +2,7 @@ import Button from '../components/Button';
 
 export default function Hero() {
   return (
-    <div className='relative isolate overflow-hidden bg-gray-900'>
+    <div className='relative overflow-hidden bg-gray-900 isolate'>
       {/* Below - Hero Gradient */}
       <svg
         viewBox='0 0 1108 632'
@@ -26,8 +26,8 @@ export default function Hero() {
           </linearGradient>
         </defs>
       </svg>
-      <div className='mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:py-40 lg:px-8'>
-        <div className='mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8'>
+      <div className='px-6 pt-10 pb-24 mx-auto max-w-7xl sm:pb-32 lg:flex lg:py-40 lg:px-8'>
+        <div className='flex-shrink-0 max-w-2xl mx-auto lg:mx-0 lg:max-w-xl lg:pt-8'>
           {/* <img
             className='h-11'
             src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500'
@@ -38,7 +38,7 @@ export default function Hero() {
               {/* 
                 TODO: This should lead to new courses
               */}
-              <span className='rounded-full bg-indigo-500/10 px-3 py-1 text-sm font-semibold leading-6 text-blue-400 ring-1 ring-inset ring-blue-500/20'>
+              <span className='px-3 py-1 text-sm font-semibold leading-6 text-blue-400 rounded-full bg-indigo-500/10 ring-1 ring-inset ring-blue-500/20'>
                 What's new
               </span>
               <span className='inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-300'>
@@ -53,7 +53,7 @@ export default function Hero() {
                   viewBox='0 0 24 24'
                   strokeWidth={1.5}
                   stroke='currentColor'
-                  className='h-5 w-5 text-gray-500'>
+                  className='w-5 h-5 text-gray-500'>
                   <path
                     strokeLinecap='round'
                     strokeLinejoin='round'
@@ -71,7 +71,7 @@ export default function Hero() {
             courses. Gain in-demand skills that will benefit you and your
             future!
           </p>
-          <div className='mt-10 flex items-center gap-x-3'>
+          <div className='flex items-center mt-10 gap-x-3'>
             {/* 
                 TODO: This should lead to the sign up page
               */}
@@ -89,8 +89,8 @@ export default function Hero() {
             </Button>
           </div>
         </div>
-        <div className='mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mt-0 lg:mr-0 lg:max-w-none lg:flex-none xl:ml-32'>
-          <div className='max-w-3xl flex-none sm:max-w-5xl lg:max-w-none'>
+        <div className='flex max-w-2xl mx-auto mt-16 sm:mt-24 lg:ml-10 lg:mt-0 lg:mr-0 lg:max-w-none lg:flex-none xl:ml-32'>
+          <div className='flex-none max-w-3xl sm:max-w-5xl lg:max-w-none'>
             {/* 
                 TODO: This should be an image or maybe a code snippet, or a person (classic cheese)
               */}
