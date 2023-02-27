@@ -1,12 +1,13 @@
 import { Fragment } from 'react';
+import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'Courses', href: '#' },
+  { name: 'Resources', href: '#' },
+  { name: 'Teach', href: '#' },
+  { name: 'About', href: '#' },
 ];
 
 const Navbar = () => {
@@ -22,7 +23,7 @@ const Navbar = () => {
                 <span className='sr-only'>Your Company</span>
                 <img
                   className='w-auto h-8 sm:h-10'
-                  src='https://tailwindui.com/img/logos/mark.svg?from-color=teal&from-shade=200&to-color=cyan&to-shade=400&toShade=400'
+                  src='https://tailwindui.com/img/logos/mark.svg?from-color=teal&from-shade=200&to-color=green&to-shade=400&toShade=400'
                   alt=''
                 />
               </a>
@@ -35,12 +36,12 @@ const Navbar = () => {
             </div>
             <div className='hidden space-x-8 md:ml-10 md:flex'>
               {navigation.map((item) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
                   className='text-base font-medium text-white hover:text-gray-300'>
                   {item.name}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -75,12 +76,12 @@ const Navbar = () => {
               <div>
                 <img
                   className='w-auto h-8'
-                  src='https://tailwindui.com/img/logos/mark.svg?from-color=teal&from-shade=500&to-color=cyan&to-shade=600&toShade=600'
+                  src='https://tailwindui.com/img/logos/mark.svg?from-color=teal&from-shade=500&to-color=green&to-shade=600&toShade=600'
                   alt=''
                 />
               </div>
               <div className='-mr-2'>
-                <Popover.Button className='inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600'>
+                <Popover.Button className='inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500/80'>
                   <span className='sr-only'>Close menu</span>
                   <XMarkIcon className='w-6 h-6' aria-hidden='true' />
                 </Popover.Button>
@@ -92,7 +93,7 @@ const Navbar = () => {
                   <a
                     key={item.name}
                     href={item.href}
-                    className='block px-3 py-2 text-base font-medium text-gray-900 rounded-md hover:bg-gray-50'>
+                    className='block px-3 py-2 text-base font-medium text-gray-900 rounded-md hover:bg-gray-100'>
                     {item.name}
                   </a>
                 ))}
@@ -100,8 +101,8 @@ const Navbar = () => {
               <div className='px-5 mt-6'>
                 <a
                   href='#'
-                  className='block w-full px-4 py-3 font-medium text-center text-white rounded-md shadow bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700'>
-                  Start free trial
+                  className='block w-full px-4 py-3 font-medium text-center text-white bg-green-500 rounded-md shadow hover:bg-green-600'>
+                  Sign up
                 </a>
               </div>
               <div className='px-5 mt-6'>
