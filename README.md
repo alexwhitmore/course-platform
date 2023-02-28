@@ -18,8 +18,15 @@ Background Color:
 **Gradients**
 
 - Style #1:
+
   - text-transparent
   - bg-gradient-to-r
   - from-teal-200
   - to-green-400
   - bg-clip-text
+
+- Style #2:
+  - text-transparent
+  - bg-gradient-to-r
+  - from-teal-400
+  - to-green-600
